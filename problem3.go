@@ -13,6 +13,7 @@ func main() {
 	fmt.Println(getLargestPrimeFactor(600851475143));
 }
 
+
 func getLargestPrimeFactor(number int64) []int64{
 	//what is a prime factor?
 	//a number that multiplies with another number to get the target number and is prime
@@ -22,7 +23,7 @@ func getLargestPrimeFactor(number int64) []int64{
 	//decide which ones are prime.
 
 	factorStore := make([]int64,0)
-	for i := int64(2); i < number + int64(1); i++ {
+	for i := int64(2); i < number + int64(1); i = i+2 {
 		if number%i == int64(0) {
 			//figure out what it multiplies by
 			isPrime := true
